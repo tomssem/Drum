@@ -7,8 +7,9 @@ const soundMap = {
     "k": "tom-3",
     "l": "tom-4"
 };
-const handleClick = e => {
-    const buttonLetter = e.target.className.substr(0, 1);
+
+function handleClick() {
+    const buttonLetter = this.innerText;
     let audio = new Audio(`sounds/${soundMap[buttonLetter]}.mp3`);
     audio.play();
 }
